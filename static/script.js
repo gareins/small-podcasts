@@ -1,21 +1,9 @@
-$(document).ready(function(){
-  function onLinkInputChange() {
-    txt = $(this).val();
-    console.log(txt);
-    btn = $("#generate-button")
+window.onload = function() {
+    var input = document.getElementById('rss-url');
+    var output = document.getElementById('generated-link');
 
-    if (txt.length == 0) {
-      btn.attr("background", "#ccc");
-    } else {
-      btn.removeAttr("background");
-    }
-  }
-
-  $("#feedUrlInput").on("input", onLinkInputChange);
-
-  function init() {
-    onLinkInputChange();
-  }
-
-  init();
-});
+    input.addEventListener('keyup', function(e){
+        if(e.keyCode == 13)
+            output.innerHTML = "heoh!";
+    });
+};
