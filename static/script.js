@@ -4,6 +4,6 @@ window.onload = function() {
 
     input.addEventListener('keyup', function(e){
         if(e.keyCode == 13)
-            output.innerHTML = "heoh!";
+            output.href = window.location.origin + "/feed?url=" + input.value
     });
 };
