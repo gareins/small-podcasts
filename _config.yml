@@ -1,22 +1,39 @@
-# Welcome to Jekyll!
-#
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Small Podcasts
+description: >
+  For those with lower data plans, this can shrink files down to 10% of original size, 
+  depending on original compression. Why podcasts: These are usually long audio 
+  files with lots of talking. Using higher compression rate does not affect listening to podcast, 
+  because one just needs to understand words. Where with music, the experience is 
+  very much affected, if high compression is used. 
+  Also using newer codec OPUS gives us better quality of music at same size. 
 
-baseurl: "" # the subpath of your site, e.g./blog
-url: "http://smallpodcasts.ozbo.lt" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: ""
+url: "http://smallpodcasts.ozbo.lt"
 
 # Build settings
 markdown: kramdown
+
+# Other...
+audiofiles:
+- link: bv128.mp3
+  size: 481.3
+  type: MP3 128 Kbps
+- link: bv64.ogg
+  size: 235.4
+  type: OPUS 64 Kbps
+- link: bv32.ogg
+  size: 129.1
+  type: OPUS 32 Kbps
+- link: bv24.ogg
+  size: 94.5
+  type: OPUS 24 Kbps
+- link: bv16.ogg
+  size: 62.3
+  type: OPUS 16 Kbps
+

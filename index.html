@@ -3,10 +3,26 @@ layout: default
 ---
 
 <div class="home">
+<p>
+  For those with lower data plans, this can shrink files down to 10% of original size, depending on original compression.
+  <br>
+  Why podcasts: These are usually long audio files with lots of talking. Using higher compression rate does not affect
+  listening to podcast, because one just needs to understand words. Where with music,
+  the experience is very much affected, if high compression is used.
+  <br>
+  Also using newer codec OPUS gives us better quality of music at same size.
+</p>
 
-  <h1 class="page-heading">Posts</h1>
+<h1 class="page-heading"> Examples </h1>
+<ul class="examples-list">
+  {% for file in site.audiofiles %}
+    <li> <span>{{file.type}} ({{file.size}})</span> <audio controls=""> <source src="static/music/{{file.link}}" type="audio/mp3">
+Your browser does not support mp3 audio element. </source></audio></li>
+  {% endfor %}
+</ul>
 
-  <ul class="post-list">
+<h1 class="page-heading"> Podcasts </h1>
+<ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -18,6 +34,7 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+<!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->

@@ -194,6 +194,16 @@
     font-size: 24px;
 }
 
+.examples-list {
+  list-style-type: none;
+  padding-left: 0px;
+  
+  li span {
+    float: left;
+    width: 200px;
+  }
+}
+
 
 
 /**
